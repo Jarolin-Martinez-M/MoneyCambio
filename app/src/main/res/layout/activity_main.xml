@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lorennimatos.moneycambio.MainActivity"
+    android:weightSum="1"
+    android:gravity="center"
+    android:background="#F7F9F9"
+    android:layout_margin="10dp"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/monedaActualTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.07"
+        android:gravity="center"
+        android:text="Moneda Actual"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <Spinner
+        android:id="@+id/monedaActualSP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.07"
+        android:entries="@array/monedas"
+        android:textColor="#060201"/>
+
+    <TextView
+        android:id="@+id/monedaCambioTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.07"
+        android:gravity="center"
+        android:text="Moneda Cambio"
+        android:textColor="#060201"/>
+
+    <Spinner
+        android:id="@+id/monedaCambioSP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.07"
+        android:entries="@array/monedas"
+        android:textColor="#060201"
+        />
+
+    <TextView
+        android:id="@+id/valorCambio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.07"
+        android:gravity="center"
+        android:text="Valor a Cambiar"
+        android:textColor="#060201"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/valorCambioET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#060201"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:numeric="integer"
+        android:inputType="number"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/procesoCambioBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clickConvertir"
+            android:text="Procesar Cambio"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:textColor="#060201"
+            android:layout_margin="20dp"/>
+
+
+        <TextView
+            android:id="@+id/resultadoTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:textColor="#060201"/>
+
+    </LinearLayout>
+
+</LinearLayout>
